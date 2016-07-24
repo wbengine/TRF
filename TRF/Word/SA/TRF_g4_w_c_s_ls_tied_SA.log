@@ -1,0 +1,246 @@
+
+[ReFile]  bNew = true
+[Begin]	2104723 Sat 19:55:55
+-vocab =	/home/wangbin/NAS/workspace/wangb/Experiments/Enwords_for_HRF/enword_c10.list
+-feat =	g4_w_c_s_ls_tied.fs
+-order =	2
+-len =	0
+-train =	/home/wangbin/NAS/workspace/wangb/Experiments/Enwords_for_HRF/LDC_gigaword_en.words.train.id
+-valid =	/home/wangbin/NAS/workspace/wangb/Experiments/Enwords_for_HRF/LDC_gigaword_en.words.valid.id
+-test =	/home/wangbin/NAS/workspace/wangb/Experiments/Enwords_for_HRF/LDC_gigaword_en.words.test.id
+-read =	[NULL]
+-write =	TRF_g4_w_c_s_ls_tied_SA.model
+-iter =	1000
+-thread =	2
+-mini-batch =	300
+-t0 =	500
+-gamma-lambda =	100,0.6
+-gamma-zeta =	0,0.6
+-unupdate-lambda =	false
+-unupdate-zeta =	false
+-tavg =	0
+-L2 =	false
+-init =	false
+-print-per-iter =	1
+*********************************************
+         TRF_SAtrain.exe { by Bin Wang }        
+	Jul 23 2016	19:55:40	
+**********************************************
+[OMP] omp_thread = 2
+[Vocab] Read from /home/wangbin/NAS/workspace/wangb/Experiments/Enwords_for_HRF/enword_c10.list
+[Vocab] Read 26 words
+[Vocab] Class = 10
+[Feat] Reset: Load feat style form file = g4_w_c_s_ls_tied.fs
+[Feat] Feat cutoff...
+[Feat] Feat cutoff num = 0
+[Feat] Feat index...
+[Feat] = {
+  w[1:4]: 77635 order=[1,4] cut=
+  c[1:4]: 10832 order=[1,4] cut=
+  w[1]-[1]w[1]: 669 order=[3,3] cut=
+  w[1]-[2]w[1]: 673 order=[4,4] cut=
+  w[2]-[1]w[1]: 10994 order=[4,4] cut=
+  w[1]-[1]w[2]: 10826 order=[4,4] cut=
+  c[1]-[1]c[1]: 100 order=[3,3] cut=
+  c[1]-[2]c[1]: 100 order=[4,4] cut=
+  c[2]-[1]c[1]: 1000 order=[4,4] cut=
+  c[1]-[1]c[2]: 1000 order=[4,4] cut=
+  w[1]-[3]w[1]: 671 order=[5,5] cut=
+  w[1]-[4]w[1]: 671 order=[6,6] cut=
+  w[1]-[5]w[1]: 667 order=[7,7] cut=
+  c[1]-[3]c[1]: 100 order=[5,5] cut=
+  c[1]-[4]c[1]: 100 order=[6,6] cut=
+  c[1]-[5]c[1]: 100 order=[7,7] cut=
+  w[1]-[6:10]w[1]: 1931 order=[8,12] cut=
+  c[1]-[6:10]c[1]: 300 order=[8,12] cut=
+  total = 118369
+}
+m_pCorpusTrain->GetNum() = 139139
+m_pCorpusValid->GetNum() = 100
+m_pCorpusTest->GetNum() = 15459
+[WARNING] [MLfunc] Reset: Re-set the model with length=25
+nMaxLen = 25
+m_pModel->GetMaxLen() = 25
+train-pi = [ 0.000165302 0.0040535 0.0298982 0.0536873 0.0752197 0.101776 0.130524 0.142131 0.133421 0.11178 0.0820546 0.0552541 0.0350369 0.0202316 0.0115424 0.00614493 0.00328449 0.00157397 0.000884008 0.000668396 0.000294669 0.000179676 4.31223e-05 8.62447e-05 6.46835e-05 ]
+Smoothing the pi
+sample-pi = [ 0.0888545 0.0888545 0.0888545 0.0888545 0.0888545 0.0888545 0.0888545 0.0888545 0.083409 0.0698804 0.0512971 0.0345426 0.0219036 0.0126479 0.00721584 0.00384156 0.00205332 0.000983978 0.000552645 0.000417854 0.000184215 0.000112326 2.69583e-05 5.39166e-05 4.04374e-05 ]
+[SAfunc] *** Info: *** 
+  m_nMiniBatchSample = 300
+  m_nCDSampleTimes = 1
+  m_nSASampleTimes = 1
+  m_fEmpiricalVarGap = 0.025744
+  [AISConfig for Z]  nChain=16 nIter=1000
+  [AISConfig for LL] nChain=16 nIter=1000
+[SAfunc] *** [End] ***
+[SATrain] *** Info: ***
+  m_gain_lambda	tc=100 beta=0.6 t0=500
+  m_gain_zeta	tc=0 beta=0.6 t0=500
+[SATrain] *** [End] ***
+[Init Parameters] Zero
+[Model] Write(txt) to temp_model\TRF_g4_w_c_s_ls_tied_SA.n0.model
+[Model] Write(txt) to TRF_g4_w_c_s_ls_tied_SA.model
+[SAMS] ************* Training Begin *****************
+[SAMS] print-per-iter=1
+ len-jump acc-rate=74.6193%(147/197) class-propose acc-rate=2.80637e+06%(968227286/34501)
+[SAMS] t=1 epoch=0.00215612 time=0m ExValues={ 29.7423 30.0293 29.715 }
+[SAMS] g_lambda=0.00990099 g_zeta=1
+ len-jump acc-rate=72.3618%(144/199) class-propose acc-rate=72.7705%(1836/2523)
+[SAMS] t=2 epoch=0.00431223 time=0.246667m ExValues={ 29.034 29.3472 29.017 }
+[SAMS] g_lambda=0.00985069 g_zeta=0.659754
+ len-jump acc-rate=72.3077%(141/195) class-propose acc-rate=72.5309%(940/1296)
+[SAMS] t=3 epoch=0.00646835 time=0.522667m ExValues={ 29.5094 29.7404 29.4705 }
+[SAMS] g_lambda=0.00981035 g_zeta=0.517282
+ len-jump acc-rate=81.1594%(168/207) class-propose acc-rate=74.4578%(1236/1660)
+[SAMS] t=4 epoch=0.00862447 time=0.7375m ExValues={ 29.4906 29.7189 29.4492 }
+[SAMS] g_lambda=0.00977542 g_zeta=0.435275
+ len-jump acc-rate=75.1323%(142/189) class-propose acc-rate=73.4227%(931/1268)
+[SAMS] t=5 epoch=0.0107806 time=0.967667m ExValues={ 29.6865 29.91 29.6468 }
+[SAMS] g_lambda=0.00974407 g_zeta=0.380731
+ len-jump acc-rate=72.9592%(143/196) class-propose acc-rate=73.5564%(1121/1524)
+[SAMS] t=6 epoch=0.0129367 time=1.182m ExValues={ 29.3915 29.6013 29.3525 }
+[SAMS] g_lambda=0.00971533 g_zeta=0.341279
+ len-jump acc-rate=73.8462%(144/195) class-propose acc-rate=74.9837%(1151/1535)
+[SAMS] t=7 epoch=0.0150928 time=1.40383m ExValues={ 29.0481 29.2553 29.0119 }
+[SAMS] g_lambda=0.0096886 g_zeta=0.311129
+ len-jump acc-rate=76.5854%(157/205) class-propose acc-rate=74.1559%(1208/1629)
+[SAMS] t=8 epoch=0.0172489 time=1.63083m ExValues={ 28.4272 28.6262 28.3913 }
+[SAMS] g_lambda=0.0096635 g_zeta=0.287175
+ len-jump acc-rate=69.6809%(131/188) class-propose acc-rate=74.3531%(1954/2628)
+[SAMS] t=9 epoch=0.0194051 time=1.85667m ExValues={ 28.5123 28.7081 28.4769 }
+[SAMS] g_lambda=0.00963974 g_zeta=0.267581
+ len-jump acc-rate=66.8394%(129/193) class-propose acc-rate=76.3158%(2465/3230)
+[SAMS] t=10 epoch=0.0215612 time=2.14867m ExValues={ 28.4303 28.6107 28.3937 }
+[SAMS] g_lambda=0.00961713 g_zeta=0.251189
+ len-jump acc-rate=68.8776%(135/196) class-propose acc-rate=76.2386%(1585/2079)
+[SAMS] t=11 epoch=0.0237173 time=2.49083m ExValues={ 28.0568 28.2473 28.0186 }
+[SAMS] g_lambda=0.00959551 g_zeta=0.237227
+ len-jump acc-rate=76.3736%(139/182) class-propose acc-rate=73.6471%(626/850)
+[SAMS] t=12 epoch=0.0258734 time=2.74383m ExValues={ 27.9339 28.0956 27.8946 }
+[SAMS] g_lambda=0.00957476 g_zeta=0.22516
+ len-jump acc-rate=76.8817%(143/186) class-propose acc-rate=73.7986%(1121/1519)
+[SAMS] t=13 epoch=0.0280295 time=2.94767m ExValues={ 27.2303 27.3796 27.1906 }
+[SAMS] g_lambda=0.00955477 g_zeta=0.214602
+ len-jump acc-rate=77.665%(153/197) class-propose acc-rate=76.2834%(1486/1948)
+[SAMS] t=14 epoch=0.0301856 time=3.17167m ExValues={ 27.1026 27.2632 27.063 }
+[SAMS] g_lambda=0.00953546 g_zeta=0.205269
+ len-jump acc-rate=83.7838%(186/222) class-propose acc-rate=76.8734%(1190/1548)
+[SAMS] t=15 epoch=0.0323418 time=3.4185m ExValues={ 27.166 27.3394 27.127 }
+[SAMS] g_lambda=0.00951678 g_zeta=0.196945
+ len-jump acc-rate=79.0244%(162/205) class-propose acc-rate=74.4152%(1018/1368)
+[SAMS] t=16 epoch=0.0344979 time=3.64183m ExValues={ 27.1924 27.3621 27.1535 }
+[SAMS] g_lambda=0.00949866 g_zeta=0.189465
+ len-jump acc-rate=77.7228%(157/202) class-propose acc-rate=74.8691%(1573/2101)
+[SAMS] t=17 epoch=0.036654 time=3.85767m ExValues={ 27.1853 27.3488 27.1461 }
+[SAMS] g_lambda=0.00948105 g_zeta=0.182697
+ len-jump acc-rate=75%(147/196) class-propose acc-rate=77.2269%(1838/2380)
+[SAMS] t=18 epoch=0.0388101 time=4.10133m ExValues={ 27.407 27.5869 27.3694 }
+[SAMS] g_lambda=0.00946391 g_zeta=0.176537
+ len-jump acc-rate=70.8333%(136/192) class-propose acc-rate=76.7762%(1448/1886)
+[SAMS] t=19 epoch=0.0409662 time=4.35767m ExValues={ 27.6626 27.8543 27.6271 }
+[SAMS] g_lambda=0.00944722 g_zeta=0.170902
+ len-jump acc-rate=77.3196%(150/194) class-propose acc-rate=73.9394%(1342/1815)
+[SAMS] t=20 epoch=0.0431223 time=4.59m ExValues={ 27.7742 27.9537 27.7406 }
+[SAMS] g_lambda=0.00943092 g_zeta=0.165723
+ len-jump acc-rate=74%(148/200) class-propose acc-rate=75.9965%(1735/2283)
+[SAMS] t=21 epoch=0.0452785 time=4.82267m ExValues={ 27.9237 28.0962 27.8908 }
+[SAMS] g_lambda=0.00941501 g_zeta=0.160942
+ len-jump acc-rate=72.3958%(139/192) class-propose acc-rate=76.0116%(789/1038)
+[SAMS] t=22 epoch=0.0474346 time=5.08317m ExValues={ 28.0642 28.2457 28.0324 }
+[SAMS] g_lambda=0.00939944 g_zeta=0.156512
+ len-jump acc-rate=76.8473%(156/203) class-propose acc-rate=76.3214%(1444/1892)
+[SAMS] t=23 epoch=0.0495907 time=5.29167m ExValues={ 27.7691 27.9407 27.737 }
+[SAMS] g_lambda=0.00938421 g_zeta=0.152392
+ len-jump acc-rate=78.0105%(149/191) class-propose acc-rate=76.2861%(1557/2041)
+[SAMS] t=24 epoch=0.0517468 time=5.52817m ExValues={ 27.8239 27.9986 27.7927 }
+[SAMS] g_lambda=0.00936928 g_zeta=0.14855
+ len-jump acc-rate=70.202%(139/198) class-propose acc-rate=76.6138%(724/945)
+[SAMS] t=25 epoch=0.0539029 time=5.7715m ExValues={ 27.8411 28.0261 27.8115 }
+[SAMS] g_lambda=0.00935466 g_zeta=0.144956
+ len-jump acc-rate=79.2929%(157/198) class-propose acc-rate=77.6214%(1103/1421)
+[SAMS] t=26 epoch=0.056059 time=5.97667m ExValues={ 27.4406 27.6161 27.4106 }
+[SAMS] g_lambda=0.0093403 g_zeta=0.141585
+ len-jump acc-rate=72.6316%(138/190) class-propose acc-rate=74.3783%(1286/1729)
+[SAMS] t=27 epoch=0.0582152 time=6.19833m ExValues={ 27.2211 27.3982 27.1918 }
+[SAMS] g_lambda=0.00932621 g_zeta=0.138415
+ len-jump acc-rate=76.8817%(143/186) class-propose acc-rate=76.2657%(1401/1837)
+[SAMS] t=28 epoch=0.0603713 time=6.435m ExValues={ 27.2112 27.3941 27.1822 }
+[SAMS] g_lambda=0.00931237 g_zeta=0.135427
+ len-jump acc-rate=78.6458%(151/192) class-propose acc-rate=78.0186%(1512/1938)
+[SAMS] t=29 epoch=0.0625274 time=6.67367m ExValues={ 27.0574 27.2434 27.0292 }
+[SAMS] g_lambda=0.00929876 g_zeta=0.132605
+ len-jump acc-rate=76.5625%(147/192) class-propose acc-rate=76.1928%(1581/2075)
+[SAMS] t=30 epoch=0.0646835 time=6.91367m ExValues={ 27.0353 27.2275 27.0081 }
+[SAMS] g_lambda=0.00928538 g_zeta=0.129935
+ len-jump acc-rate=83.8384%(166/198) class-propose acc-rate=77.8281%(1204/1547)
+[SAMS] t=31 epoch=0.0668396 time=7.155m ExValues={ 27.1522 27.3531 27.1254 }
+[SAMS] g_lambda=0.00927222 g_zeta=0.127404
+ len-jump acc-rate=77.9487%(152/195) class-propose acc-rate=76.6158%(1707/2228)
+[SAMS] t=32 epoch=0.0689958 time=7.37617m ExValues={ 27.097 27.3009 27.0709 }
+[SAMS] g_lambda=0.00925926 g_zeta=0.125
+ len-jump acc-rate=79.6791%(149/187) class-propose acc-rate=75.4011%(846/1122)
+[SAMS] t=33 epoch=0.0711519 time=7.632m ExValues={ 27.2261 27.433 27.2005 }
+[SAMS] g_lambda=0.0092465 g_zeta=0.122713
+ len-jump acc-rate=75.8974%(148/195) class-propose acc-rate=76.6462%(1001/1306)
+[SAMS] t=34 epoch=0.073308 time=7.84183m ExValues={ 27.0614 27.2616 27.0357 }
+[SAMS] g_lambda=0.00923392 g_zeta=0.120535
+ len-jump acc-rate=82.2917%(158/192) class-propose acc-rate=76.3276%(848/1111)
+[SAMS] t=35 epoch=0.0754641 time=8.05467m ExValues={ 26.9785 27.1723 26.9517 }
+[SAMS] g_lambda=0.00922153 g_zeta=0.118457
+ len-jump acc-rate=75.6614%(143/189) class-propose acc-rate=76.4706%(832/1088)
+[SAMS] t=36 epoch=0.0776202 time=8.2635m ExValues={ 26.7706 26.9572 26.7442 }
+[SAMS] g_lambda=0.00920931 g_zeta=0.116471
+ len-jump acc-rate=80.2139%(150/187) class-propose acc-rate=74.5679%(906/1215)
+[SAMS] t=37 epoch=0.0797763 time=8.4745m ExValues={ 26.5381 26.7238 26.5116 }
+[SAMS] g_lambda=0.00919725 g_zeta=0.114572
+ len-jump acc-rate=80.4469%(144/179) class-propose acc-rate=74.764%(1188/1589)
+[SAMS] t=38 epoch=0.0819325 time=8.689m ExValues={ 26.2978 26.48 26.2718 }
+[SAMS] g_lambda=0.00918536 g_zeta=0.112753
+ len-jump acc-rate=81.1881%(164/202) class-propose acc-rate=77.4077%(1069/1381)
+[SAMS] t=39 epoch=0.0840886 time=8.91217m ExValues={ 26.1718 26.352 26.1467 }
+[SAMS] g_lambda=0.00917362 g_zeta=0.11101
+ len-jump acc-rate=70.6522%(130/184) class-propose acc-rate=74.8387%(812/1085)
+[SAMS] t=40 epoch=0.0862447 time=9.12767m ExValues={ 26.1185 26.2959 26.0928 }
+[SAMS] g_lambda=0.00916203 g_zeta=0.109336
+ len-jump acc-rate=75%(150/200) class-propose acc-rate=77.474%(1417/1829)
+[SAMS] t=41 epoch=0.0884008 time=9.33667m ExValues={ 25.794 25.9701 25.7678 }
+[SAMS] g_lambda=0.00915059 g_zeta=0.107728
+ len-jump acc-rate=84.9515%(175/206) class-propose acc-rate=77.651%(1157/1490)
+[SAMS] t=42 epoch=0.0905569 time=9.57583m ExValues={ 25.7755 25.9522 25.75 }
+[SAMS] g_lambda=0.00913928 g_zeta=0.106182
+ len-jump acc-rate=78.534%(150/191) class-propose acc-rate=77.1242%(1534/1989)
+[SAMS] t=43 epoch=0.092713 time=9.794m ExValues={ 25.7412 25.9213 25.7159 }
+[SAMS] g_lambda=0.00912811 g_zeta=0.104693
+ len-jump acc-rate=74.4792%(143/192) class-propose acc-rate=75.967%(2121/2792)
+[SAMS] t=44 epoch=0.0948692 time=10.0348m ExValues={ 25.7579 25.9448 25.7333 }
+[SAMS] g_lambda=0.00911707 g_zeta=0.103259
+ len-jump acc-rate=74.0196%(151/204) class-propose acc-rate=77.3488%(1663/2150)
+[SAMS] t=45 epoch=0.0970253 time=10.3107m ExValues={ 25.9426 26.1392 25.9198 }
+[SAMS] g_lambda=0.00910615 g_zeta=0.101876
+ len-jump acc-rate=79.0816%(155/196) class-propose acc-rate=76.9711%(986/1281)
+[SAMS] t=46 epoch=0.0991814 time=10.5588m ExValues={ 25.9989 26.2011 25.9773 }
+[SAMS] g_lambda=0.00909536 g_zeta=0.100541
+ len-jump acc-rate=78.9189%(146/185) class-propose acc-rate=75.9819%(1006/1324)
+[SAMS] t=47 epoch=0.101338 time=10.7722m ExValues={ 25.9008 26.0934 25.8796 }
+[SAMS] g_lambda=0.00908469 g_zeta=0.0992525
+ len-jump acc-rate=82.6733%(167/202) class-propose acc-rate=73.2164%(1211/1654)
+[SAMS] t=48 epoch=0.103494 time=10.986m ExValues={ 25.8035 25.9929 25.7822 }
+[SAMS] g_lambda=0.00907413 g_zeta=0.0980066
+ len-jump acc-rate=79.1667%(152/192) class-propose acc-rate=77.1755%(1082/1402)
+[SAMS] t=49 epoch=0.10565 time=11.2135m ExValues={ 25.8296 26.0193 25.8088 }
+[SAMS] g_lambda=0.00906368 g_zeta=0.0968016
+ len-jump acc-rate=80.1047%(153/191) class-propose acc-rate=73.5981%(630/856)
+[SAMS] t=50 epoch=0.107806 time=11.4368m ExValues={ 25.6609 25.8509 25.6405 }
+[SAMS] g_lambda=0.00905335 g_zeta=0.0956352
+ len-jump acc-rate=79.558%(144/181) class-propose acc-rate=75.964%(591/778)
+[SAMS] t=51 epoch=0.109962 time=11.6392m ExValues={ 25.3962 25.5801 25.3753 }
+[SAMS] g_lambda=0.00904311 g_zeta=0.0945057
+ len-jump acc-rate=77.9487%(152/195) class-propose acc-rate=76.6414%(1214/1584)
+[SAMS] t=52 epoch=0.112118 time=11.8393m ExValues={ 25.1264 25.3029 25.1051 }
+[SAMS] g_lambda=0.00903298 g_zeta=0.093411
+ len-jump acc-rate=79.5349%(171/215) class-propose acc-rate=75.9385%(1679/2211)
+[SAMS] t=53 epoch=0.114274 time=12.062m ExValues={ 25.0538 25.2362 25.0334 }
+[SAMS] g_lambda=0.00902296 g_zeta=0.0923495
+ len-jump acc-rate=80.4762%(169/210) class-propose acc-rate=76.8767%(1147/1492)
+[SAMS] t=54 epoch=0.11643 time=12.3133m ExValues={ 25.1475 25.3351 25.1279 }
+[SAMS] g_lambda=0.00901302 g_zeta=0.0913195
+ len-jump acc-rate=78.5%(157/200) class-propose acc-rate=77.8065%(1504/1933)
