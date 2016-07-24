@@ -126,7 +126,7 @@ _wbMain
 	func.m_fdbg.Open(String(cfg_pathModelWrite).FileName() + ".sadbg", "wt");
 //  	func.m_fparm.Open(String(cfg_pathModelWrite).FileName() + ".parm", "wt");
 //  	func.m_fgrad.Open(String(cfg_pathModelWrite).FileName() + ".grad", "wt");
- 	func.m_fvar.Open(String(cfg_pathModelWrite).FileName() + ".var", "wt");
+// 	func.m_fvar.Open(String(cfg_pathModelWrite).FileName() + ".var", "wt");
 // 	func.m_fexp.Open(String(cfg_pathModelWrite).FileName() + ".expt", "wt");
 //   	func.m_fsamp.Open(String(cfg_pathModelWrite).FileName() + ".samp", "wt");
 //   	func.m_ftrain.Open(String(cfg_pathModelWrite).FileName() + ".train", "wt");

@@ -1,0 +1,15 @@
+# executable folder
+bin/
+
+# objective files
+*.o
+
+# exclude some experiments files
+/exp/Word/ngram/*
+!/exp/Word/ngram/*.py
+/exp/Word/trf/*
+!/exp/Word/trf/*.py
+/exp/PTB/ngram/*
+!/exp/PTB/ngram/*.py
+/exp/PTB/trf/*
+!/exp/PTB/trf/*.py

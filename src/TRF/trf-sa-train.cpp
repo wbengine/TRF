@@ -348,7 +348,11 @@ namespace trf
 	{
 		String strTempModel;
 		String strName = String(m_pathOutputModel).FileName();
+#ifdef __linux
+		strTempModel.Format("%s/%s.n%d.model", m_modelDir.GetBuffer(), strName.GetBuffer(), nEpoch);
+#else
 		strTempModel.Format("%s\\%s.n%d.model", m_modelDir.GetBuffer(), strName.GetBuffer(), nEpoch);
+#endif
 		m_pModel->WriteT(strTempModel);
 
 		m_pModel->WriteT(m_pathOutputModel);

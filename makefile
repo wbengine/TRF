@@ -1,7 +1,7 @@
 
 DIR_BASE=./src/base/
 DIR_TRF=./src/TRF/
-CC=g++ -I $(DIR_BASE) -std=c++11 -fopenmp
+CC=g++ -I $(DIR_BASE) -std=c++11 -fopenmp -m64 -O3
 
 CPP=$(DIR_BASE)wb-log.cpp $(DIR_BASE)wb-linux.cpp $(DIR_BASE)wb-win.cpp $(DIR_BASE)wb-file.cpp \
 		$(DIR_BASE)wb-option.cpp $(DIR_BASE)wb-solve.cpp $(DIR_BASE)wb-string.cpp \
