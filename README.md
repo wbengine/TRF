@@ -10,9 +10,16 @@ You can get all the executables in "bin/"
 
 
 The package is organized as follows:
-src/ 	all the C++ source code\n
-bin/	all the executable files\n
-exp/	the language modeling experiments\n
-LICENSE	the license\n
-README.md	the readme file\n
-makefile	the makefile to bulid the tools\n
+
+  src/ 	all the C++ source code
+
+  bin/	all the executable files
+
+  exp/	the language modeling experiments
+
+  LICENSE	the license
+
+  README.md	the readme file
+
+  makefile	the makefile to bulid the tools
+
