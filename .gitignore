@@ -13,3 +13,4 @@ bin/
 !/exp/PTB/ngram/*.py
 /exp/PTB/trf/*
 !/exp/PTB/trf/*.py
+!/exp/PTB/trf/*.fs #feature style files
