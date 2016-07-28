@@ -7,6 +7,15 @@ Use `make all` to complie the code and the executables are generated in **bin/**
 The package is organized as follows:
 - **src/** includes the C++ source code
 - **exp/** includes	the scripts and data of the language modeling experiments
+  - **exp/Word/** is a word morphology expeirment, a pilot expeirment to modeling English words (character sequences)
+  - **exp/PTB/** is the LM experments on Penn Treebank (PTB) dataset. 
+  - **exp/Word/data/** and **exp/PTB/data/** contain all the training, valid and test data for LM training. 
+    * **\*.lext** is the vocabulary for ngram LMs;
+    * **\*.list** is the vocabulary used by TRFLMs. The only differenc between **\*.lext** and **\*.list** is that *.list remove the begin and end sysboms '\<s\>' and' \</s\>'
+    * **\*.no** is the dataset corresponding to the vocabulary **\*.lext**, used by ngram LMs
+    * **\*.id** is the dataset corresponding to the vocabulary **\*.list**, used by TRFLMs
+  - **exp/Word/ngram/** and **exp/PTB/ngram/** contain the python scripts for ngram LMs
+  - **exp/Word/trf/** and **exp/PTB/trf/** contain the python scripts for TRFLM training
 
 For a detial introduction of TRFLM, see 
 > Wang, Bin, Zhijian Ou, and Zhiqiang Tan. "Trans-dimensional random fields for language modeling." ACL,2015.
